@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>To Do List</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <h1 class="text-center">
+        To Do List
+        <span class="badge" id="badge">
+            0
+        </span>
+    </h1>
+
+    <div class="container">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    事項清單
+                </h3>
+            </div>
+
+            <!-- 新增 -->
+            <div class="panel-body">
+                <form class="my-create my-form form" action="javascript:;" onsubmit="return myCreate(this)">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <input type="text" class="input-lg form-control" required>
+                            <div class="input-group-addon">
+                                <button type="submit" class="my-btn btn-primary glyphicon glyphicon-plus"></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 待辦清單 -->
+            <table class="my-table table table-hover">
+                <tbody id="list">
+                    <!--
+                        <tr>
+                            <td class="my-pointer">
+                                <span class="my-font glyphicon glyphicon-unchecked" aria-hidden="true" onclick="doneToggle()"></span>
+                                <span class="my-status-done-true my-font glyphicon glyphicon-check" aria-hidden="true" onclick="doneToggle()"></span>
+                            </td>
+
+                            <td>
+                                <small>
+                                    2017-08-29 08:29
+                                </small>
+                                <p class="my-pointer my-status-edit my-font" onclick="doneToggle()">
+                                    待辦事項
+                                </p>
+
+                                <form class="my-status-edit-true my-status-edit my-update my-form form" action="javascript:;" onsubmit="return edit(this)">
+                                    <div class="input-group">
+                                        <input type="hidden" class="form-control" value="id">
+                                        <input type="text" class="form-control" value="content">
+                                        <div class="input-group-addon">
+                                            <button type="submit" class="my-btn btn-info glyphicon glyphicon-floppy-disk"></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </td>
+
+                            <td class="my-operation">
+                                <button type="button" class="my-btn my-btn-transparent text-info glyphicon glyphicon-pencil" onclick="editToggle()"></button>
+                                <button type="button" class="my-btn my-btn-transparent text-danger glyphicon glyphicon-trash" data-toggle="modal" data-target="#my-alert" onclick="deleteCheck()"></button>
+                            </td>
+                        </tr>
+                        -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 刪除再次確認 -->
+    <div class="modal fade" id="my-alert" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title text-danger text-center">
+                        即將刪除【
+                        <span id="delete-content"></span>
+                        】
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center">請再次確認！請再次確認！請再次確認！</p>
+                    <div class="alert alert-warning alert-dismissible fade in text-center" role="alert">
+                        <strong>注意！</strong> 因為很重要所以要說三次
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-danger" onclick="myDelete()">確認刪除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

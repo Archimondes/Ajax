@@ -1,0 +1,86 @@
+/* ===== 預設 ===== */
+
+.my-btn {
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+
+.my-btn-transparent {
+    background: transparent;
+}
+
+.my-pointer {
+    cursor: pointer;
+}
+
+.my-font {
+    font-size: 18px;
+    line-height: 34px;
+    margin: 0;
+}
+
+.my-form {
+    width: 100%;
+}
+
+.my-form .input-group-addon {
+    padding: 0;
+}
+
+.my-form .input-group-addon .glyphicon {
+    top: 0;
+}
+
+
+/* ===== 新增 ===== */
+
+.my-create .input-group-addon button {
+    width: 50px;
+    height: 44px;
+}
+
+
+/* ===== 表格 ===== */
+
+
+/* 第一欄 狀態 */
+
+.my-table td:first-child {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.my-status-done-true {
+    display: none;
+}
+
+
+/* 第二欄 */
+
+.my-style-done-true {
+    color: #aaa;
+    text-decoration: line-through;
+}
+
+.my-status-edit-true {
+    display: none;
+}
+
+.my-update .input-group-addon button {
+    width: 35px;
+    height: 32px;
+}
+
+
+/* 第三欄 操作 */
+
+.my-table td:last-child {
+    width: 80px;
+    vertical-align: middle;
+}
+
+.my-operation button {
+    width: 30px;
+    height: 34px;
+}
